@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
-// email for owner key
+// _id for owner key
 var PirateSchema = new Schema({
   name: String,
   owner: String,

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('zubieliciousRepoApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location) {
+  .controller('SignupCtrl', function ($scope, Auth, $location, $state) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -12,11 +12,12 @@ angular.module('zubieliciousRepoApp')
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
-          password: $scope.user.password
+          password: $scope.user.password,
+          uid: new Date().getTime()
         })
         .then( function() {
           // Account created, redirect to home
-          $location.path('/');
+          $state.go('main');
         })
         .catch( function(err) {
           err = err.data;

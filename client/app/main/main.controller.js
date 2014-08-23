@@ -1,26 +1,35 @@
 'use strict';
 
 angular.module('zubieliciousRepoApp')
-  .controller('MainCtrl', function ($scope, $http, $state, Location, $q, Auth, $activityIndicator, User) {
-    // $scope.awesomeThings = [];
+  .controller('MainCtrl', function ($scope, $http, $state, Location, $q, Auth, $activityIndicator, User, pirate) {
 
-    // $http.get('/api/things').success(function(awesomeThings) {
-    //   $scope.awesomeThings = awesomeThings;
-    // });
-
-    // $scope.addThing = function() {
-    //   if($scope.newThing === '') {
-    //     return;
-    //   }
-    //   $http.post('/api/things', { name: $scope.newThing });
-    //   $scope.newThing = '';
-    // };
-
-    // $scope.deleteThing = function(thing) {
-    //   $http.delete('/api/things/' + thing._id);
-    // };
     $activityIndicator.startAnimating();
 
+    User.get('me').$promise.then(function (user) {
+      var p = new pirate({id: user.uid});
+      p.$get({id: user.uid}, function (data) {
+        $scope.pirate = data;
+      }, function (err) {
+        if (err.status === 404) {
+          // Let's create a pirate!
+          var newPirate = new pirate({
+            name : 'Little Jack',
+            owner : user.uid,
+            hunger : 20,
+            thirst : 20,
+            health : 20,
+            happiness : 50,
+            energy : 10
+          });
+          newPirate.$create(function (data) {
+            $scope.pirate = data;
+          }, function (err) {
+
+          });
+          console.log('error');
+        }
+      });
+    });
 
 
     $scope.isLoggedIn = function () {
@@ -43,7 +52,9 @@ angular.module('zubieliciousRepoApp')
       $scope.location = data;
     }).then(function () {
       var weatherlocation = 'http://api.openweathermap.org/data/2.5/weather?lat='
-      + $scope.location.lat + '&lon=' + $scope.location.lng + '&units=imperial';
+        + $scope.location.lat
+        + '&lon=' + $scope.location.lng
+        + '&units=imperial';
       console.log('weatherLocation ' + weatherlocation);
       $http({
         method: 'GET',

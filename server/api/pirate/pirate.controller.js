@@ -22,10 +22,14 @@ exports.index = function(req, res) {
 
 // Get a single Pirate
 exports.show = function(req, res) {
-  Pirate.findById(req.params.id, function (err, Pirate) {
+  console.log('req ' + req.params.id);
+  Pirate.find({owner: req.params.id}, function (err, Pirate) {
     if(err) { return handleError(res, err); }
     if(!Pirate) { return res.send(404); }
-    return res.json(Pirate);
+    if (Pirate.length == 0) {return res.send(404); }
+    else {
+      return res.json(Pirate[0]);
+    }
   });
 };
 
