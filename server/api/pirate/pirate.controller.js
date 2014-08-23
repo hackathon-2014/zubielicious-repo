@@ -10,7 +10,7 @@
 'use strict';
 
 var _ = require('lodash');
-var Pirate = require('./Pirate.model');
+var Pirate = require('./pirate.model');
 
 // Get list of Pirates
 exports.index = function(req, res) {
