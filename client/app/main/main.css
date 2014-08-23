@@ -160,3 +160,49 @@
 .padTop {
   padding-top: 15px;
 }
+
+.foodBtn {
+  background-image:url(/assets/images/pk_BTN_Menu_Food.png);
+  height: 104px;
+  width: 104px;
+  display: inline-block;
+}
+
+.limeBtn {
+  background-image:url(/assets/images/pk_BTN_Menu_Lime.png);
+  height: 104px;
+  width: 104px;
+  display: inline-block;
+}
+
+.drinkBtn {
+  background-image:url(/assets/images/pk_BTN_Menu_Dring.png);
+  height: 104px;
+  width: 104px;
+  display: inline-block;
+}
+
+.lootBtn {
+  background-image:url(/assets/images/pk_BTN_Menu_Loot.png);
+  height: 104px;
+  width: 104px;
+  display: inline-block;
+}
+
+.logoutBtn {
+  background-image:url(/assets/images/pk_BTN_Menu_Logout.png);
+  height: 104px;
+  width: 104px;
+  display: inline-block;
+}
+
+.menuOptions {
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  -o-transform: scale(0.65);
+  -ms-transform: scale(0.65);
+  transform: scale(0.65);
+  position: relative;
+  bottom: 30px;
+  right: 30px;
+}

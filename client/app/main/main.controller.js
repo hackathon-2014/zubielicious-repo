@@ -79,10 +79,11 @@ angular.module('zubieliciousRepoApp')
     };
 
     $scope.actions = [
-      {title: 'Food'},
-      {title: 'Drink'},
-      {title: 'Lime'},
-      {title: 'Loot'}
+      {title: 'Food', class: 'foodBtn'},
+      {title: 'Drink', class: 'drinkBtn'},
+      {title: 'Lime', class: 'limeBtn'},
+      {title: 'Loot', class: 'lootBtn'},
+      {title: 'Logout', class: 'logoutBtn'}
     ];
 
     $scope.scaler = 1;
