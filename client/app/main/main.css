@@ -41,8 +41,10 @@
 }
 
 .blueHeader {
-  height: 200px;
+  height: 225px;
   background-color: #3a3d3c;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .horizontalLine {
@@ -57,4 +59,60 @@
   position: relative;
   bottom: 30px;
   left: 105px;
+}
+
+.sun {
+  float: left;
+  padding-right: 10px;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  -o-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+}
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.titleFont {
+  font-family: 'Galindo', cursive !important;
+}
+
+.hrWidth {
+  width: 275px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.temperature {
+  position: relative;
+  right: 15px;
+  bottom: 15px;
+}
+
+.wind {
+  position: relative;
+  left: 75px;
+  bottom: 15px;
+}
+
+.scaleDown {
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  -o-transform: scale(0.65);
+  -ms-transform: scale(0.65);
+  transform: scale(0.65);
+}
+
+.tempImg {
+  position: relative;
+  left: 25px;
+  top: 8px;
+}
+
+.windImg {
+  position: relative;
+  top: 8px;
+  left: 30px;
 }

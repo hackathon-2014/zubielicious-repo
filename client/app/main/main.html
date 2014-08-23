@@ -4,14 +4,28 @@
   <div class="container">
     <!-- <h1>Pet Pirate</h1>
     <p class="lead">Test yer parenting on the high seas!</p> -->
-    <h3 class="text-left" ng-show="tooHot()">It's Hot Out!</h3>
+    <img src="assets/images/pk_Icon_Weather_Hot_xxxhdpi.png" class="sun">
+    <h3 class="text-left titleFont" ng-show="tooHot()">It's Hot Out!</h3>
     <!--<h3 ng-show="tooCold()">It's Cold Out!</h3>-->
     <!--<h5 class="bg-danger warning" ng-show="tooHot() || tooCold()">Make haste! Today's weather will make ye pirate cranky!</h5>-->
     <h5 class="text-left" ng-show="tooHot()">Make sure to keep the baby pirate hydrated with plenty of rum.</h5>
     <!--<span class="horizontalLine"></span>-->
-    <hr/>
+    <hr class="hrWidth"/>
     <!--<h5>{{weatherData.currentConditions.description | uppercase}} and the temp is {{weatherData.temp | number:0}}&degF</h5>-->
-    <h5>Temp {{weatherData.temp | number:0}}&degF</h5>
+    <!-- <span class="col-lg-6">Temp </span>
+    <span class="col-lg-6">Wind {{weatherData.wind | number:0}}</span>
+    <span class="col-lg-6"></span>
+    <span class="col-lg-6">mph</span> -->
+    <div class="row">
+      <img src="assets/images/pk_Icon_Temp_2x.png" class="col-lg-3 scaleDown tempImg">
+      <span class="col-lg-3 titleFont">Temp</span>
+      <img src="assets/images/pk_Icon_Wind_2x.png" class="col-lg-3 scaleDown windImg">
+      <span class="col-lg-3 titleFont">Wind</span>
+    </div>
+    <div class="row">
+      <span class="col-lg-6 temperature">{{weatherData.temp | number:0}}&degF</span>
+      <span class="col-lg-6 wind">{{weatherData.wind | number:0}}mph</span>
+    </div>
   </div>
 </header>
 
