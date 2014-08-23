@@ -59,5 +59,15 @@
 
 
 
-<footer class="footer">
+<footer>
+  <div class="row-fluid">
+    <table class="table pirateTable">
+      <tr>
+        <td>Happiness: {{pirate.happiness | number: 0}}</td>
+        <td>Hunger: {{pirate.hunger | number: 0}}</td>
+        <td>Thirst: {{pirate.thirst | number: 0}}</td>
+        <td>Energy: {{pirate.energy | number: 0}}</td>
+      </tr>
+    </table>
+  </div>
 </footer>

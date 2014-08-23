@@ -15,8 +15,8 @@ angular.module('zubieliciousRepoApp')
           var newPirate = new pirate({
             name : 'Little Jack',
             owner : user.uid,
-            hunger : 20,
-            thirst : 20,
+            hunger : 0,
+            thirst : 0,
             health : 20,
             happiness : 50,
             energy : 10
@@ -138,20 +138,29 @@ angular.module('zubieliciousRepoApp')
       $state.go('login');
     }
 
+    function updatePirate () {
+      $scope.pirate.happiness += 2;
+      $scope.pirate.$update({id: $scope.pirate.owner});
+    }
+
     $scope.feed = function () {
       $scope.pirate.hunger -= 3;
+      updatePirate();
     };
 
     $scope.drink = function () {
       $scope.pirate.thirst -= 3;
+      updatePirate();
     };
 
     $scope.scurvy = function () {
       $scope.pirate.health -= 3;
+      updatePirate();
     };
 
     $scope.loot = function () {
       $scope.pirate.happiness += 5;
+      updatePirate();
     };
 
 
