@@ -16,13 +16,13 @@
     <span class="col-lg-6">Wind {{weatherData.wind | number:0}}</span>
     <span class="col-lg-6"></span>
     <span class="col-lg-6">mph</span> -->
-    <div class="row">
-      <img src="assets/images/pk_Icon_Temp_2x.png" class="col-lg-3 scaleDown tempImg">
+    <div class="row-fluid">
+      <img src="assets/images/pk_Icon_Temp_2x.png" class="col-lg-3 scaleDown tempImg" />
       <span class="col-lg-3 titleFont">Temp</span>
-      <img src="assets/images/pk_Icon_Wind_2x.png" class="col-lg-3 scaleDown windImg">
+      <img src="assets/images/pk_Icon_Wind_2x.png" class="col-lg-3 scaleDown windImg" />
       <span class="col-lg-3 titleFont">Wind</span>
     </div>
-    <div class="row">
+    <div class="row-fluid">
       <span class="col-lg-6 temperature">{{weatherData.temp | number:0}}&degF</span>
       <span class="col-lg-6 wind">{{weatherData.wind | number:0}}mph</span>
     </div>
@@ -40,7 +40,7 @@
   <div class="babyContainer">
     <div ng-activity-indicator ng-hide="weatherLoaded" class="col-sm-12 center" ng-style="{'left':'50%'}"></div>
     <div class="row-fluid" ng-show="weatherLoaded">
-      <div class="col-sm-12">
+      <div class="col-sm-12" ng-style="{'margin': '0 auto', 'width': '80%'}">
         <img src="assets/images/captainbaby_pkBaby_Static.png" class="babyPirate">
       </div>
     </div>

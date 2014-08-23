@@ -15,7 +15,6 @@
 
 .hero-unit {
     position: relative;
-    padding: 30px 15px;
     color: #F5F5F5;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
@@ -41,7 +40,6 @@
 }
 
 .blueHeader {
-  height: 225px;
   background-color: #3a3d3c;
   padding-left: 5px;
   padding-right: 5px;
@@ -53,12 +51,6 @@
 
 .babyContainer {
   height: 300px;
-}
-
-.actionBubble {
-  position: relative;
-  bottom: 30px;
-  left: 105px;
 }
 
 .sun {
