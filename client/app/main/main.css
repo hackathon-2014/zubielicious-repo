@@ -28,3 +28,18 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+.babyPirate {
+  -webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+  position: relative;
+  bottom: 150px;
+  right: 75px;
+}
+
+.blueHeader {
+  height: 300px;
+}
