@@ -2,20 +2,12 @@
 
 angular.module('zubieliciousRepoApp')
   .factory('Location', function ($q) {
-    // Service logic
-    // ...
 
     var location = {};
 
-
-
-    function showPosition (position) {
-
-    };
-
     function error (err) {
       return 'error ' + err;
-    }
+    };
 
     location.getLocation = function () {
       var deferred = $q.defer();
@@ -40,7 +32,7 @@ angular.module('zubieliciousRepoApp')
     return location;
 
     // Public API here
-    return {
-      getLocation: getLocation,
-    };
+    // return {
+    //   getLocation: getLocation
+    // };
   });

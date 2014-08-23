@@ -5,7 +5,8 @@ angular.module('zubieliciousRepoApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngActivityIndicator'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -13,6 +14,10 @@ angular.module('zubieliciousRepoApp', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
+delete $httpProvider.defaults.headers.common['X-Requested-With'];
+//     $httpProvider.defaults.headers['Access-Control-Allow-Origin'] = '*';
+// $httpProvider.defaults.headers['Access-Control-Allow-Methods']: GET, POST, PUT, DELETE
+// $httpProvider.defaults.headers['Access-Control-Allow-Headers'] = 'Authorization';
   })
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
