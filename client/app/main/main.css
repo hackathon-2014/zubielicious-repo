@@ -136,3 +136,7 @@
   left: 110px;
   bottom: 30px;
 }
+
+.overflow {
+  overflow: hidden;
+}
