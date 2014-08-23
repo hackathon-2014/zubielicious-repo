@@ -35,8 +35,8 @@
 	-ms-transform: scale(0.5);
 	transform: scale(0.5);
   position: relative;
-  bottom: 130px;
-  right: 80px;
+  bottom: 2250px;
+  right: 100px;
 }
 
 .blueHeader {
@@ -107,4 +107,32 @@
   position: relative;
   top: 8px;
   left: 30px;
+}
+
+.scaleGrad {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  position: relative;
+  bottom: 285px;
+  right: 219px;
+}
+
+.scaleShip {
+  -webkit-transform: scale(0.47);
+  -moz-transform: scale(0.47);
+  -o-transform: scale(0.47);
+  -ms-transform: scale(0.47);
+  transform: scale(0.47);
+  position: relative;
+  bottom: 1300px;
+  right: 542px;
+}
+
+.actionBubble {
+  position: relative;
+  left: 110px;
+  bottom: 30px;
 }
