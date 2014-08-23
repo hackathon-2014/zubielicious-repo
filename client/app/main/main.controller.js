@@ -27,6 +27,13 @@ angular.module('zubieliciousRepoApp')
       return Auth.isLoggedIn();
     };
 
+    $scope.actions = [
+      {title: 'Food'},
+      {title: 'Drink'},
+      {title: 'Lime'},
+      {title: 'Loot'}
+    ];
+
     $scope.scaler = 1;
     $scope.weatherLoaded = false;
 

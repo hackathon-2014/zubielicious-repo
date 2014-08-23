@@ -29,6 +29,13 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="actionBubble bg-primary" ng-click = "showBtn = !showBtn">+</div>
+      <div ng-repeat="action in actions" ng-show="showBtn" class="actionBubble bg-info">{{action.title}}</div>
+    </div>
+  </div>
+
 </div>
 
 

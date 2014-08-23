@@ -37,3 +37,16 @@
     color: #000;
     padding: 0.2em 0;
 }
+
+.actionBubble {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 20px;
+    border: 2px solid #E1DEDE;
+    box-shadow: 0 3px 3px #ddd;
+
+}
