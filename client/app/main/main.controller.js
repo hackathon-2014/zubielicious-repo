@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('zubieliciousRepoApp')
-  .controller('MainCtrl', function ($scope, $http, $state, Location, $q, Auth, $activityIndicator, User, pirate) {
+  .controller('MainCtrl', function ($scope, $http, $timeout, $state, Location, $q, Auth, $activityIndicator, User, pirate, $interval) {
 
     $activityIndicator.startAnimating();
 
@@ -30,6 +30,47 @@ angular.module('zubieliciousRepoApp')
         }
       });
     });
+
+    $scope.randomNumGenerator = function () {
+      $scope.randomNum = Math.floor((Math.random() * 3000000) + 10000 * 30);
+    };
+
+    function makeHungry() {
+      $scope.pirate.hunger += 1 * $scope.scaler;
+    };
+
+    function makeThirsty () {
+      $scope.pirate.thirst += 1 * $scope.scaler;
+    };
+
+    function decreaseHealth() {
+      $scope.health -= 1 * $scope.scaler;
+    };
+
+    $interval(function() {
+      $scope.randomNumGenerator();
+      console.log('interval' + $scope.randomNum);
+      var mod = Math.floor((Math.random() * 10) + 1);
+      console.log('mod ' + mod);
+      switch(mod) {
+        case 1:
+          makeHungry();
+          break;
+        case 2:
+          makeThirsty();
+          break;
+        case 3:
+          decreaseHealth();
+          break;
+        default:
+          console.log('nothing happens');
+      }
+
+      $timeout(function(){
+        console.log('random num timeout');
+      }, $scope.randomNum);
+
+    }, 10000);
 
 
     $scope.isLoggedIn = function () {
@@ -86,8 +127,8 @@ angular.module('zubieliciousRepoApp')
 
     // main function to setup weather dependencies
     deferredWeather.promise.then(function() {
-      if ($scope.tooHot() || $scope.tooCold()) {
-        $scope.scaler = 0.7;
+      if ($scope.tooHot() || $scope.tooCold() || $scope.weatherData.wind > 10) {
+        $scope.scaler = 1.7;
       }
       $scope.weatherLoaded = true;
       $activityIndicator.stopAnimating();
@@ -96,4 +137,22 @@ angular.module('zubieliciousRepoApp')
     if (!$scope.isLoggedIn()) {
       $state.go('login');
     }
+
+    $scope.feed = function () {
+      $scope.pirate.hunger -= 3;
+    };
+
+    $scope.drink = function () {
+      $scope.pirate.thirst -= 3;
+    };
+
+    $scope.scurvy = function () {
+      $scope.pirate.health -= 3;
+    };
+
+    $scope.loot = function () {
+      $scope.pirate.happiness += 5;
+    };
+
+
   });
