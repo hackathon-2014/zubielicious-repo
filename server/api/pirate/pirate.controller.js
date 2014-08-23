@@ -1,10 +1,10 @@
 /**
  * Using Rails-like standard naming convention for endpoints.
- * GET     /Pirates              ->  index
- * POST    /Pirates              ->  create
- * GET     /Pirates/:id          ->  show
- * PUT     /Pirates/:id          ->  update
- * DELETE  /Pirates/:id          ->  destroy
+ * GET     /pirate              ->  index
+ * POST    /pirate              ->  create
+ * GET     /pirate/:id          ->  show
+ * PUT     /pirate/:id          ->  update
+ * DELETE  /pirate/:id          ->  destroy
  */
 
 'use strict';

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('zubieliciousRepoApp')
-  .controller('MainCtrl', function ($scope, $http, $state, Location, $q, Auth, $activityIndicator) {
+  .controller('MainCtrl', function ($scope, $http, $state, Location, $q, Auth, $activityIndicator, User) {
     // $scope.awesomeThings = [];
 
     // $http.get('/api/things').success(function(awesomeThings) {
@@ -58,6 +58,7 @@ angular.module('zubieliciousRepoApp')
         $scope.weatherData.minTemp = weatherData.main.temp_min;
         $scope.weatherData.temp = weatherData.main.temp;
         $scope.weatherData.humidity = (weatherData.main.humidity / 100.0);
+        $scope.weatherData.wind = weatherData.wind.speed;
         // grab the first weather condition
         $scope.weatherData.currentConditions = weatherData.weather[0];
         deferredWeather.resolve();
