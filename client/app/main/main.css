@@ -36,10 +36,25 @@
 	-ms-transform: scale(0.5);
 	transform: scale(0.5);
   position: relative;
-  bottom: 150px;
-  right: 75px;
+  bottom: 130px;
+  right: 80px;
 }
 
 .blueHeader {
+  height: 200px;
+  background-color: #3a3d3c;
+}
+
+.horizontalLine {
+  border-bottom:1px solid #cfcfcf;
+}
+
+.babyContainer {
   height: 300px;
+}
+
+.actionBubble {
+  position: relative;
+  bottom: 30px;
+  left: 105px;
 }
