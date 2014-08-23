@@ -1,11 +1,11 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<div ng-include="'components/navbar/navbar.html'" class="hideNav"></div>
 
 <header class="hero-unit blueHeader" id="banner">
   <div class="container">
     <!-- <h1>Pet Pirate</h1>
     <p class="lead">Test yer parenting on the high seas!</p> -->
     <img src="assets/images/pk_Icon_Weather_Hot_xxxhdpi.png" class="sun">
-    <h3 class="text-left titleFont" ng-show="tooHot()">It's Hot Out!</h3>
+    <h3 class="text-left titleFont padTop" ng-show="tooHot()">It's Hot Out!</h3>
     <!--<h3 ng-show="tooCold()">It's Cold Out!</h3>-->
     <!--<h5 class="bg-danger warning" ng-show="tooHot() || tooCold()">Make haste! Today's weather will make ye pirate cranky!</h5>-->
     <h5 class="text-left" ng-show="tooHot()">Make sure to keep the baby pirate hydrated with plenty of rum.</h5>
@@ -50,7 +50,8 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <div class="actionBubble bg-primary" ng-click = "showBtn = !showBtn"></div>
+      <div class="actionBubble bg-primary" ng-click = "showBtn = !showBtn"><img src="assets/images/pk_BTN_Menu_2x.png" class="scaleMenu"></div>
+
       <div ng-repeat="action in actions" ng-show="showBtn" class="actionBubble bg-info">{{action.title}}</div>
     </div>
   </div>

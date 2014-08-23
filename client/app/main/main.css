@@ -56,6 +56,7 @@
 .sun {
   float: left;
   padding-right: 10px;
+  padding-top: 25px;
   -webkit-transform: scale(0.75);
   -moz-transform: scale(0.75);
   -o-transform: scale(0.75);
@@ -135,8 +136,27 @@
   position: relative;
   left: 110px;
   bottom: 30px;
+  background-color: #3a3d3c;
 }
 
 .overflow {
   overflow: hidden;
+}
+
+.scaleMenu {
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  -o-transform: scale(0.65);
+  -ms-transform: scale(0.65);
+  transform: scale(0.65);
+  position: relative;
+  bottom: 4px;
+}
+
+.hideNav {
+  display: none;
+}
+
+.padTop {
+  padding-top: 15px;
 }
