@@ -64,6 +64,7 @@ angular.module('zubieliciousRepoApp')
           break;
         default:
           console.log('nothing happens');
+          $scope.pirate.happiness -= 1;
       }
 
       $timeout(function(){

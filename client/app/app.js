@@ -6,6 +6,7 @@ angular.module('zubieliciousRepoApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
+  'ngAnimate',
   'ngActivityIndicator'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
