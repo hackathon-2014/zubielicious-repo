@@ -179,7 +179,12 @@ angular.module('zubieliciousRepoApp')
         $scope.pirate.hunger = 0;
       }
       updatePirate();
+      $scope.foodVal = true;
     };
+
+    $scope.closeFood = function() {
+      $scope.foodVal = false;
+    }
 
     $scope.drink = function () {
       $scope.pirate.thirst -= 3;
@@ -187,7 +192,12 @@ angular.module('zubieliciousRepoApp')
         $scope.pirate.thirst = 0;
       }
       updatePirate();
+      $scope.drinkVal = true;
     };
+
+    $scope.closeDrink = function() {
+      $scope.drinkVal = false;
+    }
 
     $scope.scurvy = function () {
       $scope.pirate.health -= 3;
@@ -195,12 +205,22 @@ angular.module('zubieliciousRepoApp')
         $scope.pirate.health = 0;
       }
       updatePirate();
+      $scope.limeVal = true;
     };
+
+    $scope.closeLime = function () {
+      $scope.limeVal = false;
+    }
 
     $scope.loot = function () {
       $scope.pirate.happiness += 5;
       updatePirate();
+      $scope.lootVal = true;
     };
+
+    $scope.closeLoot = function () {
+      $scope.lootVal = false;
+    }
 
     $scope.logout = function() {
 
