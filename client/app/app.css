@@ -39,16 +39,53 @@
 }
 
 .actionBubble {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 50px;
     height: 50px;
     border-radius: 100%;
     text-align: center;
-    line-height: 50px;
-    margin: 0 20px;
+    /*line-height: 50px;*/
+    /*margin: 0 20px;*/
     border: 2px solid #E1DEDE;
     box-shadow: 0 3px 3px #ddd;
+}
 
+.bubble0 {
+    -webkit-transform: translate3d(0, 185px, 0);
+    -ms-transform: translate3d(0, 185px, 0);
+    transform: translate3d(0, 185px, 0);
+}
+
+.bubble1 {
+-webkit-transform: translate3d(40px, 70px, 0);
+    -ms-transform: translate3d(40px, 70px, 0);
+    transform: translate3d(40px, 70px, 0);
+}
+
+.bubble2 {
+    -webkit-transform: translate3d(110px, -14px, 0);
+    -ms-transform: translate3d(110px, -14px, 0);
+    transform: translate3d(110px, -14px, 0);
+}
+
+.bubble3 {
+    -webkit-transform: translate3d(187px, -33px, 0);
+    -ms-transform: translate3d(187px, -33px, 0);
+    transform: translate3d(187px, -33px, 0);
+}
+
+.bubble4 {
+    -webkit-transform: translate3d(240px, -13px, 0);
+    -ms-transform: translate3d(240px, -13px, 0);
+    transform: translate3d(240px, -13px, 0);
+}
+
+
+.mainAction {
+    position: fixed;
+left: 40%;
+bottom: 95px;
+    background-color: #3a3d3c;
 }
 .navbar-default {
     background-color: #3a3d3c !important;
@@ -66,6 +103,7 @@
     font-weight: 400;
     text-align: center;
     font-size: 10px;
+    margin: 0 !important;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {

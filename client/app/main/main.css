@@ -132,13 +132,6 @@
   right: 542px;
 }
 
-.actionBubble {
-  position: relative;
-  left: 110px;
-  bottom: 30px;
-  background-color: #3a3d3c;
-}
-
 .overflow {
   overflow: hidden;
 }
