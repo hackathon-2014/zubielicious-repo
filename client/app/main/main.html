@@ -34,7 +34,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="actionBubble bg-primary" ng-click = "showBtn = !showBtn"><img src="assets/images/pk_BTN_Menu_2x.png" class="scaleMenu"></div>
-      <div ng-repeat="action in actions" ng-show="showBtn" class="actionBubble bg-info"><span class="menuOptions" ng-class="action.class"></span></div>
+      <div ng-repeat="action in actions" ng-show="showBtn" class="actionBubble bg-info"><span class="menuOptions" ng-class="action.class" ng-click="doAction(action.title)"></span></div>
     </div>
   </div>
 </div>

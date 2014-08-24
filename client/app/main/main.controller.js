@@ -127,6 +127,24 @@ angular.module('zubieliciousRepoApp')
       return $scope.weatherData.minTemp || $scope.weatherData.temp < 60;
     };
 
+    $scope.doAction = function(action) {
+      if(action === 'Food'){
+        $scope.feed();
+      }
+      else if(action === 'Drink') {
+        $scope.drink();
+      }
+      else if(action === 'Lime') {
+          $scope.scurvy();
+      }
+      else if(action === 'Loot') {
+        $scope.loot();
+      }
+      else if(action === 'Logout') {
+        $scope.logout();
+      }
+    }
+
     // main function to setup weather dependencies
     deferredWeather.promise.then(function() {
       if ($scope.tooHot() || $scope.tooCold() || $scope.weatherData.wind > 10) {
@@ -165,5 +183,7 @@ angular.module('zubieliciousRepoApp')
       updatePirate();
     };
 
+    $scope.logout = function() {
 
+    }
   });
