@@ -203,6 +203,7 @@ angular.module('zubieliciousRepoApp')
     };
 
     $scope.logout = function() {
-
-    }
+      Auth.logout();
+      $state.go('login');
+    };
   });
