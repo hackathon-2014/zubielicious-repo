@@ -122,11 +122,11 @@
 }
 
 .scaleShip {
-  -webkit-transform: scale(0.47);
-  -moz-transform: scale(0.47);
-  -o-transform: scale(0.47);
-  -ms-transform: scale(0.47);
-  transform: scale(0.47);
+  -webkit-transform: scale(0.57);
+  -moz-transform: scale(0.57);
+  -o-transform: scale(0.57);
+  -ms-transform: scale(0.57);
+  transform: scale(0.57);
   position: relative;
   bottom: 1300px;
   right: 542px;
@@ -198,4 +198,17 @@
   position: relative;
   bottom: 30px;
   right: 30px;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(-2deg);
+    }
+    to{
+        -webkit-transform: rotate(2deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 2s linear infinite alternate;
 }
