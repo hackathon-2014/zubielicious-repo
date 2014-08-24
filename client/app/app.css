@@ -80,6 +80,13 @@
     transform: translate3d(240px, -13px, 0);
 }
 
+.pirateLoader {
+    position: fixed;
+    left: 41%;
+    top: 50%;
+    z-index: 9999;
+}
+
 
 .mainAction {
     position: fixed;

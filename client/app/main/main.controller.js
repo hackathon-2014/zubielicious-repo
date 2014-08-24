@@ -36,15 +36,20 @@ angular.module('zubieliciousRepoApp')
     };
 
     function makeHungry() {
-      $scope.pirate.hunger += 1 * $scope.scaler;
+        $scope.pirate.hunger += 1 * $scope.scaler;
+
     };
 
     function makeThirsty () {
-      $scope.pirate.thirst += 1 * $scope.scaler;
+
+        $scope.pirate.thirst += 1 * $scope.scaler;
+
     };
 
     function decreaseHealth() {
-      $scope.health -= 1 * $scope.scaler;
+
+        $scope.pirate.health += 1 * $scope.scaler;
+
     };
 
     $interval(function() {
@@ -128,6 +133,7 @@ angular.module('zubieliciousRepoApp')
     };
 
     $scope.doAction = function(action) {
+
       if(action === 'Food'){
         $scope.feed();
       }
@@ -143,6 +149,10 @@ angular.module('zubieliciousRepoApp')
       else if(action === 'Logout') {
         $scope.logout();
       }
+
+      $timeout(function(){
+       $scope.showBtn = false;
+      }, 500);
     }
 
     // main function to setup weather dependencies
@@ -160,21 +170,30 @@ angular.module('zubieliciousRepoApp')
 
     function updatePirate () {
       $scope.pirate.happiness += 2;
-      $scope.pirate.$update({id: $scope.pirate.owner});
+      $scope.pirate.$update({id: $scope.pirate._id});
     }
 
     $scope.feed = function () {
       $scope.pirate.hunger -= 3;
+      if ($scope.pirate.hunger <= 0) {
+        $scope.pirate.hunger = 0;
+      }
       updatePirate();
     };
 
     $scope.drink = function () {
       $scope.pirate.thirst -= 3;
+      if ($scope.pirate.thirst <= 0) {
+        $scope.pirate.thirst = 0;
+      }
       updatePirate();
     };
 
     $scope.scurvy = function () {
       $scope.pirate.health -= 3;
+      if ($scope.pirate.health <= 0) {
+        $scope.pirate.health = 0;
+      }
       updatePirate();
     };
 
